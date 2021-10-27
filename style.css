@@ -1,0 +1,87 @@
+body {
+  background-image: repeating-linear-gradient(45deg, red,blue, purple, yellow);
+  font-family: 'Oxygen', sans-serif;
+}
+
+.container{
+  width:100vw;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 400px;
+  width: 300px;
+  background-color: #fdfeff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.profile-picture{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition-property: all;
+  transition-duration: 300ms;
+}
+
+.card:hover > .profile-picture {
+  margin-top: 30px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px grey;
+}
+
+.info-container {
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-delay: 100ms;
+  transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  text-align: center;
+}
+
+.card:hover > .info-container {
+  flex: 1;
+}
+
+.card-bio{
+  margin-top: 20px;
+  font-family: 'Oxygen';
+  font-weight: 700px;
+  font-size: 15px;
+  align-items: center;
+  padding-top: 1px;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
